@@ -10,7 +10,6 @@ import Signup from './components/Signup'
 const AppState=createContext();
 
 function App() {
-
   const [login,setLogin]=useState(false)
   const [userName,setUserName]=useState("")
 
@@ -18,6 +17,7 @@ function App() {
   return (
     <AppState.Provider value={{login,setLogin,userName,setUserName}}>
     <div className="App relative">
+       
       <Header />
       <Routes>
         <Route path="/" element={<Cards/>} />
