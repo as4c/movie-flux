@@ -13,7 +13,7 @@ function App() {
   const [login,setLogin]=useState(false)
   const [userName,setUserName]=useState("")
 
-
+  console.log(process.env.REACT_APP_FIREBASE_API_KEY)
   return (
     <AppState.Provider value={{login,setLogin,userName,setUserName}}>
     <div className="App relative">

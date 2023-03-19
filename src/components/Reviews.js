@@ -75,7 +75,7 @@ const Reviews = ({ id, preRate, userRated }) => {
     async function getData() {
       setReviewLoading(true);
       setData([])
-      let qr = query(reviewRef, where("movieId", "===", id));
+      let qr = query(reviewRef, where("movieId", "==", id));
       const qrSnapshot = await getDocs(qr);
       qrSnapshot.forEach((doc) => {
         setData((pre) => [...pre, doc.data()]);
