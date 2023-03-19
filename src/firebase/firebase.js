@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore,collection} from 'firebase/firestore' 
 const firebaseConfig = {
-  apiKey: "AIzaSyBstTAG-MAApeHMg5zF1PuDmiKlYeXWzmY",
-  authDomain: "movieflux-52f9e.firebaseapp.com",
-  projectId: "movieflux-52f9e",
-  storageBucket: "movieflux-52f9e.appspot.com",
-  messagingSenderId: "227495084074",
-  appId: "1:227495084074:web:5e2103fefd9d81e7754353"
+  apiKey: process.env.API_KEY,
+  authDomain:process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORE_BUCKET,
+  messagingSenderId:process.env.MESSAGESENDERID,
+  appId: process.env.APPID
 };
 
 const app = initializeApp(firebaseConfig);
